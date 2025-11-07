@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+        <link rel="stylesheet" href="style.css" />
+    </head>
+    <body>
+        <!-- Header - Navigation -->
+        <header>
+            <div class="navigation">
+                <a href="#home">
+                    <img src="download.png" alt="ThinkPlus Logo" class="logo" />
+                </a>
+                <nav class="nav-bar">
+                    <a href="#home">Home</a>
+                    <a href="#about">About Us</a>
+                    <a href="#courses">Courses</a>
+                    <a href="#testimonials">Testimonials</a>
+                    <a href="#resources">Resources</a>
+                    <a href="#contact">Contact</a>
+                </nav>
+                <button class="start">Start Your Journey</button>
+            </div>
+        </header>
+        <!-- Hero Section -->
+        <main>
+            <div class="hero-section">
+                <h1 class="headline">
+                    Empowering Students through
+                    <span id="dynamic-word">Expert-led Courses</span>
+                </h1>
+
+                <p class="sub-head">
+                    Ace CAT, IPMAT, CLAT, and more with ThinkPlus — guided by
+                    IIM graduates through curated & results-driven courses
+                </p>
+                <div class="cta-btns">
+                    <button class="cta-1">Explore Courses</button>
+                    <button class="cta-2">Contact Us</button>
+                </div>
+                <img src="" alt="" />
+            </div>
+
+        <section class="why">
+            <div class="why-container">
+                <h3>Why Choose ThinkPlus?</h3>
+                <div class="card-container">
+                    <div class="card">
+                        <div class="icon" style="background-color:#EA763F;">
+                            <img src="graduation-mortarboard-svgrepo-com.svg" alt="Graduation cap icon">
+                        </div>
+                        
+                        <h3>Expert Mentors</h3>
+                        <p>Learn from IIM graduates and industry experts who guide you at every step.</p>
+                    </div>
+                    <div class="card">
+                        <div class="icon" style="background-color:#3B9FE8">
+                        <img src="teacher-svgrepo-com.svg" alt="Monitor icon">
+                        </div>
+                        <h3>Live Interactive Sessions</h3>
+                        <p>Engage in real-time classes, clear doubts instantly, and stay connected with mentors.</p>
+                    </div>
+                    <div class="card">
+                        <div class="icon" style="background-color:#9979F6;">
+                        <img src="calendar-svgrepo-com.svg" alt="Sitemap icon"></div>
+                        <h3>Structure learning</h3>
+                        <p>Master concepts through a step-by-step curriculum designed for consistent progress.</p>
+                    </div>
+                    <div class="card">
+                        <div class="icon" style="background-color:#E85960;">
+                        <img src="trophy-svgrepo-com.svg" alt="Badge Icon"></div>
+                        <h3>High Success Ratio</h3>
+                        <p>Join top achievers who cracked CAT, IPMAT, and CLAT with ThinkPlus guidance.</p>
+                    </div>
+                </div>  
+            </div>
+        </section>
+        </main>
+        <!-- JS for handling the slide up with recentering as css was able to do only slideup but not recentering according to changing length of keywords -->
+        <script>
+            // words with colors (use whichever hex you prefer)
+            const wordItems = [
+                { text: "Expert-led Courses", color: "#EA763F" }, // orange
+                { text: "Live Sessions", color: "#3B9FE8" }, // blue
+                { text: "Career Guidance", color: "#9979F6" }, // violet
+                { text: "Personalized Learning", color: "#E85960" }, // red
+            ];
+
+            const wordEl = document.getElementById("dynamic-word");
+            let index = 0;
+            const hold = 2000; // time each word stays (ms)
+            const fadeDur = 400; // must match your CSS transition duration
+
+            // initialize first word and color
+            wordEl.textContent = wordItems[0].text;
+            wordEl.style.color = wordItems[0].color;
+
+            setInterval(() => {
+                // fade out (CSS .fade class should set opacity and translate)
+                wordEl.classList.add("fade");
+
+                // after fade-out completes, change text + color, then fade in
+                setTimeout(() => {
+                    index = (index + 1) % wordItems.length;
+                    wordEl.textContent = wordItems[index].text;
+                    wordEl.style.color = wordItems[index].color;
+                    wordEl.classList.remove("fade");
+                }, fadeDur);
+            }, hold);
+        </script>
+    </body>
+</html>

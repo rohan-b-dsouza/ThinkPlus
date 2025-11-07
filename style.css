@@ -1,0 +1,215 @@
+* {
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family: "Poppins", sans-serif;
+}
+
+body {
+    background-color: oklch(14.7% 0.004 49.25);
+}
+
+/* Navigation */
+
+
+header {
+    position:sticky;
+    top:0;
+    z-index:1;
+}
+.navigation {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #1D1C20;
+  padding: 10px 50px;  
+  border-radius: 8px;
+  margin-top:12px;
+  margin-left:140px;
+  margin-right:140px;
+}
+
+.nav-bar {
+    display:flex;
+    gap:45px;
+}
+
+.logo {
+  height: 60px;    
+  width: auto;
+  border-radius: 8px;
+}
+.nav-bar a {
+    text-decoration: none;
+    color:#fff;
+    font-weight:500;
+    font-size:1rem;
+    transition:all 0.3s ease;
+}
+
+.nav-bar a:hover {
+    color:#EA763F;
+    transform:translateY(-1px);
+}
+
+.start {
+    font-weight: 700;
+    color:#fff;
+    padding:13px 18px;
+    border-radius: 8px;
+    border:none;
+    background-color: #EA763F;
+    box-shadow: 0 2px 2px rgba(255, 255, 255, 0.05);
+    transition:all 0.3s ease;
+    cursor:pointer;
+}
+
+.start:hover {
+    background-color: #f7844b;
+    transform:scale(1.05);
+}
+
+/* Hero Section */
+
+.hero-section {
+width: 100%;       
+  display: flex;
+  flex-direction: column;
+  align-items: center;   
+  text-align: center; 
+}
+
+.headline {
+    color:#fff;
+    font-size:48px;
+    font-weight:700;
+    margin-top:45px;
+}
+
+.headline span {
+    color:#EA763F;
+}
+
+.sub-head {
+    color:#dadada;
+    margin-top:28px;
+    font-size:1.1rem;
+    text-align:center;
+}
+
+#dynamic-word {
+  display: inline-block;
+  margin-left: 8px;
+  transition: opacity 0.4s ease, transform 0.4s ease;
+}
+
+#dynamic-word.fade {
+  opacity: 0;
+  transform: translateY(-8px);
+}
+
+.cta-btns {
+    margin-top:40px;
+    display:flex;
+    align-items: center;
+    gap:25px;
+}
+
+.cta-1 {
+    color:#fff;
+    padding:10px 22px;
+    background-color: #EA763F;
+    border:none;
+    font-weight: 500;
+    border-radius: 4px;
+    cursor:pointer;
+    font-size:14px;
+    font-weight: 00;
+}
+
+.cta-2 {
+    padding:10px 24px;
+    border-radius: 4px;
+    border:1px solid #808080;
+    color:#dadada;
+    font-size: 14px;
+    font-weight: 500;
+    background-color: #000000;
+    cursor:pointer;
+    transition:all 0.3s ease;
+}
+
+.cta-1:hover {
+    background-color: #ff8a54ea;
+}
+
+.cta-2:hover {
+    background-color:#111111d0;
+}
+
+/* Why Choose ThinkPlus */
+
+.why-container {
+    display:flex;
+    padding:15px;
+    display:flex;
+    flex-direction:column;
+    justify-content: center;
+    align-items: center;
+    margin-top:45px;
+    text-align: center;
+    color:#fff;
+}
+
+.card-container {
+    margin-top:25px;
+    display:grid;
+    grid-template-columns: 1fr 1fr;
+    gap:35px;
+}
+
+.card {
+    background-color: #1E1F22;
+    width:360px;
+    height:310px;
+    padding:20px;
+    border-radius:8px;
+}
+
+.card h3 {
+    color:#fff;
+    text-align: left;
+    font-weight: 700;
+    margin-top:18px;
+}
+.card p {
+    color:#e0e0e0;
+    text-align: left;
+    margin-top: 16px;
+}
+
+.card img{
+    padding:5px;
+    width: 50%;
+}
+
+.icon {
+    border-radius: 5px;
+    padding:5px;
+}
+
+
+
+
+
+
+
+
+
+
+
+/* 
+accents : #EA763F;
+nav: #1D1C20
+body:oklch(14.7% 0.004 49.25);
+*/
