@@ -1,37 +1,42 @@
-🧠 ThinkPlus – EdTech Learning Platform
+🎓 ThinkPlus — EdTech Learning Platform
 
-ThinkPlus is a modern EdTech website built to help students access structured, mentor-led programs for competitive exams like CAT, IPMAT, and CLAT.
-This is the frontend version, built with clean, responsive UI and subtle animations — deployed on Netlify.
+ThinkPlus is a modern, responsive EdTech website designed to help students prepare for exams like CAT, IPMAT, and CLAT through expert-led courses and live mentorship.
+Built with clean, modular frontend code and future-ready design for backend integration.
 
 🚀 Features
 
-🎨 Modern & minimal UI design
+🧠 Hero Section with dynamic keyword animation
 
-💡 Dynamic hero section with animated keywords
+🏆 “Why Choose Us” Section highlighting platform advantages
 
-📚 Interactive course cards with 3D flip effect
+💻 Course Cards with interactive 3D flip effect (front & back details)
 
-🧭 Smooth navigation bar with hover transitions
+🎨 Modern UI Design — minimal, gradient-based theme
 
-📱 Designed with responsiveness in mind (in progress)
+💬 Contact Form for user inquiries
 
-🧾 Simple contact form for inquiries
+📱 Responsive Layout (Work in progress — will support all devices soon)
 
-🧩 Tech Stack
-Category	Technology
-Frontend	HTML5, CSS3
-Animations	CSS Transitions & Keyframes
-Deployment	Netlify
-Version Control	Git & GitHub
+🛠️ Tech Stack
 
-📈 Upcoming Features
+HTML5
 
-🌍 Fully responsive layout across all devices
+CSS3 (Flexbox, Grid, Animations)
 
-⚙️ Backend integration using JavaScript / Node.js
+JavaScript (for dynamic text rotation)
 
-✨ Smooth animations and micro-interactions
+Deployed on: Netlify
 
-🧑‍🏫 Course filtering and search functionality
+🧩 Future Improvements
 
-💬 Student testimonials, about us and feedback section
+🔄 Make the site fully responsive across devices
+
+⚙️ Add JavaScript-based backend integration
+
+✨ Implement smoother scroll & hover animations
+
+📊 Add a Courses Dashboard and login flow
+
+📸 Live Preview
+
+🌐 Visit the site: https://think-plus.netlify.app/
