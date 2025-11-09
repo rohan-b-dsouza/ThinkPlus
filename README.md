@@ -31,7 +31,7 @@ Deployed on: Netlify
 
 🔄 Make the site fully responsive across devices
 
-⚙️ Add JavaScript-based backend integration
+⚙️ Backend integration
 
 ✨ Implement smoother scroll & hover animations
 
