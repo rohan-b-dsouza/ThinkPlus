@@ -25,8 +25,9 @@ header {
   padding: 10px 50px;  
   border-radius: 8px;
   margin-top:12px;
-  margin-left:140px;
-  margin-right:140px;
+  max-width: 1400px; /* Set a max-width for large screens */
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .nav-bar {
@@ -156,24 +157,33 @@ width: 100%;
     flex-direction:column;
     justify-content: center;
     align-items: center;
-    margin-top:45px;
+    margin-top:40px;
     text-align: center;
     color:#fff;
 }
 
+.why-head {
+    font-size: 2rem;
+}
+
 .card-container {
-    margin-top:25px;
+    margin-top:40px;
     display:grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
     gap:35px;
 }
 
 .card {
     background-color: #1E1F22;
-    width:360px;
+    width:100%;
+    max-width:360px;
     height:310px;
     padding:20px;
     border-radius:8px;
+    transition:all 0.3s ease;
+}
+.card:hover {
+    transform:translateY(-10px);
 }
 
 .card h3 {
@@ -198,14 +208,252 @@ width: 100%;
     padding:5px;
 }
 
+/* Courses */
+
+.courses {
+    display:flex;
+    flex-direction: column;
+    margin-top: 2rem;
+    justify-content: center;
+    align-items: center;
+}
+
+.course-heading {
+    color:#fff;
+    font-size: 2rem;
+}
+
+.course-heading span {
+    color:#EA763F;
+}
+
+.course-subheading {
+    margin-top:20px;
+    color:#dadada;
+}
+
+.course-container {
+    display:grid;
+    margin-top:40px;
+    gap:80px;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+}
+
+/* container provides perspective (3D space) */
+.course-card {
+  width: 350px;
+  height: 430px;
+  border-radius: 10px;
+  perspective: 1000px;
+}
+
+/* inner is the element that rotates */
+.course-card-inner {
+  position: relative;            /* so front/back can absolutely fill it */
+  width: 100%;
+  height: 100%;
+  transition: transform 0.8s ease;
+  transform-style: preserve-3d;  /* keep children in 3D */
+  will-change: transform;
+  border-radius: 10px;
+}
+
+/* rotate on hover of the container */
+.course-card:hover .course-card-inner {
+  transform: rotateY(180deg);
+}
+
+/* FRONT and BACK both absolutely overlap the same area */
+.course-card-front,
+.course-card-back {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 10px;
+  backface-visibility: hidden;           /* hide the face when turned away */
+  overflow: hidden;
+  box-shadow: 0 6px 14px rgba(0,0,0,0.35);
+  border: 1px solid rgba(255,255,255,0.05);
+}
+
+/* FRONT styling (visible initially) */
+.course-card-front {
+  display: flex;
+  flex-direction: column;
+  background: linear-gradient(165deg, #1E1F22, #353535 65%, transparent);
+}
+
+.learn-more-btn {
+  
+align-self:flex-start;
+padding:8px 16px;
+margin-left:15px;
+border-radius: 8px;
+border:none;
+box-shadow: 0px 0px 1px 1px #808080;
+margin-top:22px;
+color:#1D1C20;
+font-weight: 600;
+background-color: #dadada;
+}
+
+/* image and front content */
+.course-card-front img {
+  width: 100%;
+  height: 230px;
+  object-fit: cover;
+  display:block;
+  border-radius: 8px 8px 0 0;
+  border-bottom: 1px solid rgba(255,255,255,0.05);
+}
+.course-card-front h3 { color:#fff; font-weight:600; margin:14px 16px 8px; }
+.course-card-front p { color:#dadada; font-size:0.95rem; padding:0 16px; margin-top:8px;}
+
+/* BACK side is rotated so it faces away initially */
+.course-card-back {
+background: linear-gradient(165deg, #1E1F22, #353535 65%, transparent);
+  transform: rotateY(180deg);         /* start hidden (facing back) */
+  display:flex;
+  flex-direction: column;
+  padding:28px;
+}
+
+.course-points {
+    margin-top:20px;
+    line-height: 1.8;
+    color:#dadada;
+}
+
+.course-card-back h3 {
+    color:#fff;
+    font-size:1.5rem;
+    font-weight: 700;
+}
+
+.course-price {
+  width: 100%; /* take full width */
+  display: flex;
+  flex-direction: column;
+  align-items: left;
+  justify-content: space-between; /* price left, buttons right */
+  margin-top:5px;
+}
+
+.course-btns {
+    margin-top:12px;
+    display: flex;
+    align-items: center;
+    gap:20px;
+}
+
+.enroll-btn, .enquire-btn {
+  margin-top:10px;
+  font-size: 0.9rem;
+  font-weight: 600;
+  border-radius: 6px;
+  padding: 12px 18px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+.course-btns {
+    display: flex;
+    align-items: center;
+    gap:15px;
+}
+/* 🟠 Primary CTA - Enroll */
+.enroll-btn {
+  background-color: #EA763F;
+  color: #fff;
+  border: none;
+}
+.enroll-btn:hover {
+  background-color: #ff8b57;
+  transform: scale(1.05);
+}
+
+/* ⚫ Secondary CTA - Enquire */
+.enquire-btn {
+  background-color: transparent;
+  color: #dadada;
+  border: 1px solid #888;
+}
+.enquire-btn:hover {
+  background-color: #1d1d1d;
+  color: #fff;
+  border-color: #EA763F;
+}
 
 
+/* Contact us */
 
+.contact-section {
+  margin-top: 70px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  color: #fff;
+  padding-bottom: 20px;
+}
 
+.contact-heading {
+  font-size: 2rem;
+  margin-bottom: 10px;
+}
 
+.contact-heading span {
+  color: #EA763F;
+}
 
+.contact-subtext {
+  color: #ccc;
+  font-size: 0.95rem;
+  margin-bottom: 30px;
+  width: 60%;
+}
 
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  width: 350px;
+}
 
+.contact-form input,
+.contact-form textarea {
+  background-color: #1E1F22;
+  border: 1px solid rgba(255,255,255,0.08);
+  color: #fff;
+  border-radius: 6px;
+  padding: 12px 14px;
+  font-size: 0.95rem;
+  outline: none;
+  transition: border-color 0.3s ease;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+  border-color: #EA763F;
+}
+
+.contact-btn {
+  background-color: #EA763F;
+  color: #fff;
+  border: none;
+  border-radius: 6px;
+  padding: 12px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.contact-btn:hover {
+  background-color: #ff8a54;
+  transform: scale(1.05);
+}
 
 
 /* 
