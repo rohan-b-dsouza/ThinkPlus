@@ -23,3 +23,15 @@ Frontend	HTML5, CSS3
 Animations	CSS Transitions & Keyframes
 Deployment	Netlify
 Version Control	Git & GitHub
+
+📈 Upcoming Features
+
+🌍 Fully responsive layout across all devices
+
+⚙️ Backend integration using JavaScript / Node.js
+
+✨ Smooth animations and micro-interactions
+
+🧑‍🏫 Course filtering and search functionality
+
+💬 Student testimonials, about us and feedback section
